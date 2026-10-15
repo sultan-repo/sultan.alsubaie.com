@@ -110,15 +110,7 @@ h2{margin:0 0 24px;font-size:34px;font-weight:700;letter-spacing:-.02em}
 .scope .n{font-size:13px;color:var(--accent)}
 .scope b{font-size:18px;font-weight:600;line-height:1.25}
 .scope span{font-size:14px;line-height:1.55;color:#4F463F}
-.lead-row{display:flex;flex-wrap:wrap;gap:16px}
-.entj{flex:1 1 320px;min-width:0;background:var(--dark2);color:#F1E9DF;border-radius:22px;padding:32px;display:flex;flex-direction:column;gap:16px}
-.entj .k{font-size:12px;letter-spacing:.08em;color:#B9AC9E}
-.entj .big{font-size:64px;font-weight:700;letter-spacing:.02em;line-height:1;color:#E6CFA3}
-.entj .nm{font-size:18px;font-weight:600}
-.entj p{margin:0;font-size:15px;line-height:1.6;color:#D9CDBF}
-.entj .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:8px}
-.entj .chips span{padding:4px 10px;border-radius:999px;border:1px solid #5C4C3F;font-size:12px}
-.traits{flex:2 1 520px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;grid-auto-rows:1fr}
+.traits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;grid-auto-rows:1fr}
 .traits div{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:8px}
 .traits b{font-size:17px;font-weight:600}.traits span{font-size:15px;line-height:1.55;color:#4F463F}
 .read-more{align-self:flex-start;margin-top:-8px;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0;border:0;background:none;font:inherit;font-size:15px;font-weight:600;color:#E8A58D;cursor:pointer}
@@ -148,6 +140,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;paddin
 footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:center}
 
 @media (max-width:900px){
+  .traits{grid-template-columns:1fr;grid-auto-rows:auto}
   /* photo becomes a visible portrait band at the top; text sits below it */
   .hero-media{left:0;transform:none;top:96px;bottom:auto;height:420px}
   .hero-img{width:100%;object-position:57% 12%}
@@ -172,7 +165,6 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
   .xp-text{padding-left:16px}
   .xp-text p{font-size:15.5px}
   h2{font-size:28px}
-  .entj .big{font-size:52px}
   .contact{padding:44px 20px;margin:64px 0 48px}
   .contact .mail{padding:12px 0}
 }
@@ -188,7 +180,7 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
   .xp,.xp.closed{grid-template-rows:1fr}.xp.closed .xp-in{visibility:visible}
   .detail{display:none}.roles li button{min-height:0}
   section.block{padding-top:24px;break-inside:avoid-page}
-  .entj,.contact{background:#fff;color:#1E1A17;border:1px solid #DCCFBE}.entj p,.entj .k,.entj .nm,.contact h2{color:#3D3530}
+  .contact{background:#fff;color:#1E1A17;border:1px solid #DCCFBE}.contact h2{color:#3D3530}
 }
 </style>
 </head>
@@ -210,7 +202,7 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
   <div class="hero-bottom" aria-hidden="true"></div>
   <div class="wrap">
     <header>
-      <a class="brand" href="#top"><b>Sultan Alsubaie</b><span class="mono">/ CV</span></a>
+      <a class="brand" href="#top"><b>Sultan Alsubaie</b><span class="mono">/ Profile</span></a>
       <nav aria-label="Sections">
         <a href="#career">Career</a>
         <a href="#scope">Scope</a>
@@ -235,9 +227,9 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
           </div>
         </div>
         <div class="btns">
-          <a class="btn primary" href="Sultan-Alsubaie-CV.pdf" type="application/pdf" download>
+          <a class="btn primary" href="Sultan-Alsubaie-Profile.pdf" type="application/pdf" download>
             <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
-            Download PDF</a>
+            Download profile (PDF)</a>
           <a class="btn" href="https://www.linkedin.com/in/alsubaie/">LinkedIn</a>
           <a class="btn" href="mailto:sultan@alsubaie.com">Email</a>
         </div>
@@ -288,37 +280,26 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
 
   <section id="leadership" class="block" aria-labelledby="lead-h">
     <h2 id="lead-h">How I lead</h2>
-    <div class="lead-row">
-      <div class="entj">
-        <span class="k mono">PERSONALITY TYPE</span>
-        <span class="big">ENTJ</span>
-        <span class="nm">The Commander</span>
-        <p>Strategic and decisive. Sees the long-range goal, organizes people and resources around it, and holds the line on execution.</p>
-        <div class="chips"><span>Extraverted</span><span>Intuitive</span><span>Thinking</span><span>Judging</span></div>
-      </div>
-      <div class="traits">
-        <div><b>Business before technology</b><span>Every technology decision should start with the business problem, the customer need or the strategic objective, not with the tool.</span></div>
+    <div class="traits">
+        <div><b>Business before technology</b><span>Every technology decision should start with the business problem, the customer need or the strategic objective it serves, never with the tool or the vendor.</span></div>
         <div><b>Build where ownership matters</b><span>Not everything should be built in-house, but capabilities that differentiate the business or create strategic dependency deserve ownership.</span></div>
         <div><b>Architecture is a business decision</b><span>Architecture determines cost, speed, resilience and future flexibility. It is a leadership decision, not simply a technical one.</span></div>
-        <div><b>Build teams that run without you</b><span>Strong technology organizations depend on capable leaders and engineers, not on permanent escalation to one individual.</span></div>
-        <div><b>Stay close to the technology</b><span>My role has moved on from writing software, but technical understanding still matters when challenging architecture, platforms and investments.</span></div>
+        <div><b>Build teams that run without you</b><span>Strong technology organizations depend on capable leaders and engineers who own their decisions, not on permanent escalation to one individual.</span></div>
+        <div><b>Stay close to the technology</b><span>Technical depth still matters at the leadership table. It is what lets me challenge architecture, evaluate platforms and weigh investment decisions.</span></div>
         <div><b>Simplify before you scale</b><span>Every system, vendor and integration carries a long-term cost. Retiring what no longer adds value matters as much as building what’s next.</span></div>
       </div>
-    </div>
   </section>
 
   <section class="block" aria-labelledby="edu-h">
-    <h2 id="edu-h">Education &amp; credentials</h2>
+    <h2 id="edu-h">Education</h2>
     <ul class="edu">
       <li><b>MSc, Advanced Computer Science</b><span>The University of Manchester, UK · 2007 – 2008</span></li>
       <li><b>BSc, Computer Science</b><span>Prince Sultan University · 2000 – 2005</span></li>
-      <li><b>PMP</b><span>Project Management Institute</span></li>
-      <li><b>ITIL</b><span>IT service management</span></li>
     </ul>
   </section>
 
   <section id="contact" class="contact" aria-labelledby="contact-h">
-    <h2 id="contact-h">Let’s talk.</h2>
+    <h2 id="contact-h">Contact</h2>
     <a class="mail" href="mailto:sultan@alsubaie.com">sultan@alsubaie.com</a>
     <div class="row"><a href="https://www.linkedin.com/in/alsubaie/">LinkedIn</a></div>
   </section>

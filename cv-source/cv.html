@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Sultan Alsubaie · CV</title>
+<title>Sultan Alsubaie · Profile</title>
 <style>
 @font-face{font-family:'Plex';src:url('fonts/ibm-plex-sans-latin-400-normal.woff2');font-weight:400}
 @font-face{font-family:'Plex';src:url('fonts/ibm-plex-sans-latin-500-normal.woff2');font-weight:500}
@@ -52,6 +52,12 @@ h1{margin:0;font-size:28pt;line-height:1;letter-spacing:-.025em;font-weight:700}
 .job::before{content:"";position:absolute;left:0;top:1.6mm;width:2.2mm;height:2.2mm;border-radius:.5mm;background:var(--c,#8C2F23)}
 .job::after{content:"";position:absolute;left:1mm;top:4.6mm;bottom:0;width:.25mm;background:#DCCFBE}
 .job.last::after{display:none}
+.roles-early{margin:1.4mm 0 1.6mm}
+.job .roles-early li{padding-left:0;margin:.5mm 0;display:flex;justify-content:space-between;gap:4mm}
+.job .roles-early li::before{display:none}
+.roles-early b{font-weight:600}
+.roles-early .y{font-family:'PlexMono',monospace;font-size:7.4pt;color:#6B6158;white-space:nowrap}
+.early p{margin:1.2mm 0 0}
 .jh{display:flex;justify-content:space-between;gap:4mm;align-items:baseline}
 .jh b{font-size:10.2pt;font-weight:600;line-height:1.25}
 .jh .y{font-family:'PlexMono',monospace;font-size:7.6pt;color:#6B6158;white-space:nowrap}
@@ -127,16 +133,12 @@ h1{margin:0;font-size:28pt;line-height:1;letter-spacing:-.025em;font-weight:700}
       </ul>
     </div>
     <div>
-      <p class="sh">Credentials</p>
-      <ul>
-        <li><b>PMP</b><span class="muted">Project Management Institute</span></li>
-        <li><b>ITIL</b><span class="muted">IT service management</span></li>
-      </ul>
+      <p class="sh">Core expertise</p>
+      <div class="chips"><span>Technology strategy</span><span>Enterprise architecture</span><span>Digital platforms</span><span>Streaming platforms</span><span>AI &amp; automation</span><span>Cloud &amp; infrastructure</span><span>Platform reliability</span><span>In-house engineering</span><span>Vendor management</span><span>Agile delivery</span></div>
     </div>
     <div>
-      <p class="sh">Personality type</p>
-      <div class="entj">ENTJ</div>
-      <p class="muted">The Commander: strategic and decisive; organizes people and resources around long-range goals.</p>
+      <p class="sh">Industries</p>
+      <div class="chips"><span>Telecom</span><span>Entertainment &amp; streaming</span><span>Government</span></div>
     </div>
   </aside>
 
@@ -173,14 +175,14 @@ h1{margin:0;font-size:28pt;line-height:1;letter-spacing:-.025em;font-weight:700}
     <div class="job"><div class="jh"><b>Section Manager, eServices Demand Management</b><span class="y">May 2013 – Dec 2015</span></div><div class="org">stc</div>
       <p>Customer-facing digital channels: the stc portal, the mystc portal and app, and the internal portal.</p>
       <ul><li>Led cross-functional teams across multiple digital channels.</li><li>Kept platforms stable, secure and scalable for millions of users.</li><li>Introduced continuous improvement to speed up releases and reduce downtime.</li></ul></div>
-    <div class="job" style="--c:#3F4E5C"><div class="jh"><b>Project Manager</b><span class="y">Aug 2011 – Apr 2013</span></div><div class="org">Ministry of Foreign Affairs</div>
-      <ul><li>E-services for Protocol and Security Affairs; in-house applications that replaced manual processes.</li><li>Led RFP preparation and vendor evaluation for outsourced development.</li></ul></div>
-    <div class="job"><div class="jh"><b>Senior Business Analyst</b><span class="y">Jun 2009 – Aug 2011</span></div><div class="org">stc</div>
-      <ul><li>IT solutions for mobile services, integrating enterprise applications with core telecom network elements.</li></ul></div>
-    <div class="job" style="--c:#3F4E5C"><div class="jh"><b>Senior Business Analyst</b><span class="y">Oct 2008 – Jun 2009</span></div><div class="org">Ministry of Education</div>
-      <ul><li>IT solutions for the Ministry’s portal and e-services; RFPs and vendor evaluation.</li></ul></div>
-    <div class="job last"><div class="jh"><b>Programmer</b><span class="y">Dec 2005 – Jul 2007</span></div><div class="org">stc</div>
-      <ul><li>Developed and maintained billing mediation systems for GSM and fixed-line services on UNIX.</li></ul></div>
+    <div class="job last early"><div class="jh"><b>Earlier career</b><span class="y">Dec 2005 – Apr 2013</span></div>
+      <ul class="roles-early">
+        <li><span><b>Project Manager</b>, Ministry of Foreign Affairs</span><span class="y">Aug 2011 – Apr 2013</span></li>
+        <li><span><b>Senior Business Analyst</b>, stc</span><span class="y">Jun 2009 – Aug 2011</span></li>
+        <li><span><b>Senior Business Analyst</b>, Ministry of Education</span><span class="y">Oct 2008 – Jun 2009</span></li>
+        <li><span><b>Programmer</b>, stc</span><span class="y">Dec 2005 – Jul 2007</span></li>
+      </ul>
+      <p>Delivered government e-services and in-house applications that replaced manual processes, integrated enterprise applications with core telecom network elements, led RFPs and vendor evaluation, and developed billing mediation systems for GSM and fixed-line services on UNIX.</p></div>
 
     <div class="foot"><span>2 / 2</span></div>
   </main>
@@ -188,17 +190,13 @@ h1{margin:0;font-size:28pt;line-height:1;letter-spacing:-.025em;font-weight:700}
     <div>
       <p class="sh">How I lead</p>
       <ul>
-        <li><b>Business before technology</b><span class="muted">Every technology decision should start with the business problem, the customer need or the strategic objective, not with the tool.</span></li>
+        <li><b>Business before technology</b><span class="muted">Every technology decision should start with the business problem, the customer need or the strategic objective it serves, never with the tool or the vendor.</span></li>
         <li><b>Build where ownership matters</b><span class="muted">Not everything should be built in-house, but capabilities that differentiate the business or create strategic dependency deserve ownership.</span></li>
         <li><b>Architecture is a business decision</b><span class="muted">Architecture determines cost, speed, resilience and future flexibility. It is a leadership decision, not simply a technical one.</span></li>
-        <li><b>Build teams that run without you</b><span class="muted">Strong technology organizations depend on capable leaders and engineers, not on permanent escalation to one individual.</span></li>
-        <li><b>Stay close to the technology</b><span class="muted">My role has moved on from writing software, but technical understanding still matters when challenging architecture, platforms and investments.</span></li>
+        <li><b>Build teams that run without you</b><span class="muted">Strong technology organizations depend on capable leaders and engineers who own their decisions, not on permanent escalation to one individual.</span></li>
+        <li><b>Stay close to the technology</b><span class="muted">Technical depth still matters at the leadership table. It is what lets me challenge architecture, evaluate platforms and weigh investment decisions.</span></li>
         <li><b>Simplify before you scale</b><span class="muted">Every system, vendor and integration carries a long-term cost. Retiring what no longer adds value matters as much as building what’s next.</span></li>
       </ul>
-    </div>
-    <div>
-      <p class="sh">Industries</p>
-      <div class="chips"><span>Telecom</span><span>Entertainment &amp; streaming</span><span>Government</span></div>
     </div>
   </aside>
 
