@@ -13,7 +13,7 @@
 @page{size:A4;margin:0}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{font-family:'Plex',sans-serif;color:#1E1A17;font-size:9.2pt;line-height:1.45;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:'Plex',sans-serif;color:#1E1A17;font-size:8.9pt;line-height:1.42;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .mono{font-family:'PlexMono',monospace}
 .page{width:210mm;height:297mm;display:grid;grid-template-columns:64mm 1fr;grid-template-rows:4mm 1fr;overflow:hidden;break-after:page;position:relative;background:#F7F3EC}
 .page:last-child{break-after:auto}
@@ -35,14 +35,17 @@ body{font-family:'Plex',sans-serif;color:#1E1A17;font-size:9.2pt;line-height:1.4
 h1{margin:0;font-size:30pt;line-height:1;letter-spacing:-.025em;font-weight:700}
 .title{margin:2.6mm 0 0;font-size:10.5pt;font-weight:500;color:#8C2F23}
 .summary{margin:5mm 0 0;font-size:10pt;line-height:1.55;color:#2E2722;padding-left:4mm;border-left:.8mm solid #8C2F23}
-.h2{display:flex;align-items:center;gap:3mm;margin:7mm 0 3.4mm;font-family:'PlexMono',monospace;font-size:7.4pt;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#8C2F23}
+.profile p{margin:0 0 1.6mm;font-size:8.6pt;line-height:1.5;color:#3D3530}
+.profile p:first-child{font-size:9.8pt;line-height:1.45;color:#1E1A17;font-weight:500}
+.profile p:last-child{margin:0}
+.h2{display:flex;align-items:center;gap:3mm;margin:5.6mm 0 3mm;font-family:'PlexMono',monospace;font-size:7.4pt;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#8C2F23}
 .h2::after{content:"";flex:1;height:.3mm;background:#DCCFBE}
 .scope{display:grid;grid-template-columns:1fr 1fr;gap:2.6mm 6mm}
 .scope div{display:grid;grid-template-columns:6mm 1fr;align-items:baseline}
 .scope .n{font-family:'PlexMono',monospace;font-size:7pt;color:#8C2F23}
 .scope b{font-size:8.9pt;font-weight:600}
 .scope span.d{grid-column:2;font-size:8pt;color:#5E554D;line-height:1.35}
-.job{position:relative;padding:0 0 4.2mm 6mm;break-inside:avoid}
+.job{position:relative;padding:0 0 3mm 6mm;break-inside:avoid}
 .job::before{content:"";position:absolute;left:0;top:1.6mm;width:2.2mm;height:2.2mm;border-radius:.5mm;background:var(--c,#8C2F23)}
 .job::after{content:"";position:absolute;left:1mm;top:4.6mm;bottom:0;width:.25mm;background:#DCCFBE}
 .job.last::after{display:none}
@@ -50,9 +53,9 @@ h1{margin:0;font-size:30pt;line-height:1;letter-spacing:-.025em;font-weight:700}
 .jh b{font-size:10.2pt;font-weight:600;line-height:1.25}
 .jh .y{font-family:'PlexMono',monospace;font-size:7.6pt;color:#6B6158;white-space:nowrap}
 .org{font-size:8.6pt;font-weight:500;color:#8C2F23;margin-top:.4mm}
-.job p{margin:1.4mm 0 1.2mm;color:#3D3530}
+.job p{margin:1.2mm 0 1mm;color:#3D3530}
 .job ul{margin:0;padding:0;list-style:none}
-.job li{position:relative;padding-left:3.6mm;margin:.7mm 0}
+.job li{position:relative;padding-left:3.6mm;margin:.45mm 0}
 .job li::before{content:"";position:absolute;left:0;top:1.9mm;width:1.3mm;height:1.3mm;background:#8C2F23;transform:rotate(45deg)}
 .timeline{margin-top:1mm}
 .tl-bar{position:relative;height:5mm;background:#EFE7DB;border-radius:1.2mm;overflow:hidden}
@@ -105,7 +108,14 @@ h1{margin:0;font-size:30pt;line-height:1;letter-spacing:-.025em;font-weight:700}
   <main class="main">
     <h1>Sultan Alsubaie</h1>
     <p class="title">General Manager, Entertainment Technology · stc</p>
-    <p class="summary">Technology executive with twenty years from code to the leadership table. I set technology strategy, lead AI adoption, build the teams that own it, and run platforms for millions of customers at Saudi Arabia’s largest telecom group.</p>
+    <div class="h2">Executive profile</div>
+    <div class="profile">
+      <p>I am a technology executive with more than 20 years of experience spanning software engineering, enterprise architecture, digital platforms, technology strategy and organizational leadership.</p>
+      <p>I currently lead Entertainment Technology at stc, with responsibility across engineering, architecture, infrastructure, operations, platform reliability and technology delivery for stc tv and entertainment platforms.</p>
+      <p>My experience has given me a perspective from both sides of technology leadership. I started by building systems myself, then moved through business analysis, digital channels, technology demand management and enterprise applications before taking broader technology leadership responsibilities.</p>
+      <p>A recurring theme throughout my career has been building sustainable internal capability. I have established in-house engineering teams, transitioned strategic platforms away from vendor dependency, modernized technology estates and introduced AI and automation to improve efficiency and operational performance.</p>
+      <p>I focus on the decisions that matter most at technology leadership level: where to build versus buy, how architecture supports business growth, how to develop strong engineering organizations, and how technology investment translates into customer and business value.</p>
+    </div>
 
     <div class="h2">Scope of leadership</div>
     <div class="scope">
@@ -120,12 +130,9 @@ h1{margin:0;font-size:30pt;line-height:1;letter-spacing:-.025em;font-weight:700}
     </div>
 
     <div class="h2">Experience</div>
-    <div class="job"><div class="jh"><b>General Manager, Entertainment Technology</b><span class="y">Nov 2025 – present</span></div><div class="org">stc</div>
+    <div class="job last"><div class="jh"><b>General Manager, Entertainment Technology</b><span class="y">Nov 2025 – present</span></div><div class="org">stc</div>
       <p>Leading the technology function for stc tv and entertainment platforms, end to end: engineering, architecture, infrastructure, operations, reliability and delivery.</p>
       <ul><li>Defining and executing the technology strategy for entertainment and digital platforms.</li><li>Modernising applications, cloud and on-premise infrastructure, integrations and streaming.</li><li>Driving scale and reliability on high-volume platforms, including a major platform migration.</li><li>Leading AI and automation adoption across engineering, operations, support and customer features.</li><li>Owning governance, architecture, service continuity and vendor performance.</li></ul></div>
-    <div class="job last" style="--c:#D9A07A"><div class="jh"><b>General Manager, Business Applications</b><span class="y">Mar 2019 – Nov 2025</span></div><div class="org">channels by stc</div>
-      <p>Technology strategy and delivery for sales applications at one of Saudi Arabia’s largest telecom operators.</p>
-      <ul><li>Built and led an in-house development team, reducing reliance on external vendors.</li><li>Moved critical enterprise solutions from vendor-managed to in-house platforms: significant cost savings and faster deployment.</li><li>Designed AI-powered process automation that cut operational workload.</li><li>Led Qwik, winner of the Middle East Technology Excellence Award 2022.</li><li>Managed multi-million SAR technology budgets.</li></ul></div>
 
     <div class="foot"><span>1 / 2</span></div>
   </main>
@@ -173,6 +180,9 @@ h1{margin:0;font-size:30pt;line-height:1;letter-spacing:-.025em;font-weight:700}
     </div>
 
     <div class="h2">Experience, continued</div>
+    <div class="job" style="--c:#D9A07A"><div class="jh"><b>General Manager, Business Applications</b><span class="y">Mar 2019 – Nov 2025</span></div><div class="org">channels by stc</div>
+      <p>Technology strategy and delivery for sales applications at one of Saudi Arabia’s largest telecom operators.</p>
+      <ul><li>Built and led an in-house development team, reducing reliance on external vendors.</li><li>Moved critical enterprise solutions from vendor-managed to in-house platforms: significant cost savings and faster deployment.</li><li>Designed AI-powered process automation that cut operational workload.</li><li>Led Qwik, winner of the Middle East Technology Excellence Award 2022.</li><li>Managed multi-million SAR technology budgets.</li></ul></div>
     <div class="job"><div class="jh"><b>Director, Consumer Demand Management</b><span class="y">Dec 2015 – Dec 2018</span></div><div class="org">stc</div>
       <p>The primary IT interface for every project from stc’s Consumer sector, guiding strategy, architecture and delivery of large transformation programmes.</p>
       <ul><li>Directed enterprise solution blueprints aligned with business goals and architecture standards.</li><li>Helped set IT vision and strategy for stc’s long-term transformation.</li><li>Led the adoption of Agile delivery.</li></ul></div>

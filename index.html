@@ -108,6 +108,11 @@ h2{margin:0 0 24px;font-size:34px;font-weight:700;letter-spacing:-.02em}
 .traits{flex:2 1 520px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .traits div{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:8px}
 .traits b{font-size:17px;font-weight:600}.traits span{font-size:15px;line-height:1.55;color:#4F463F}
+.profile{display:grid;grid-template-columns:minmax(200px,1fr) 2.2fr;gap:24px 64px;align-items:start}
+.profile h2{margin:0;position:sticky;top:24px}
+.prose p{margin:0 0 18px;font-size:17px;line-height:1.7;color:#3D3530;max-width:68ch}
+.prose p:first-child{font-size:22px;line-height:1.5;color:var(--ink);font-weight:500;letter-spacing:-.01em}
+.prose p:last-child{margin-bottom:0}
 .edu{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .edu li{border-top:2px solid var(--ink);padding-top:16px;display:flex;flex-direction:column;gap:4px}
 .edu b{font-size:17px;font-weight:600}.edu span{font-size:14px;color:var(--soft)}
@@ -141,6 +146,10 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
   .roles .detail{margin:6px 0 12px;padding:22px}
   .detail h3{font-size:21px}
   section.block{padding-top:64px}
+  .profile{grid-template-columns:1fr;gap:16px}
+  .profile h2{position:static}
+  .prose p{font-size:16px}
+  .prose p:first-child{font-size:19px}
   h2{font-size:28px}
   .entj .big{font-size:52px}
   .contact{padding:44px 20px;margin:64px 0 48px}
@@ -197,6 +206,19 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
 
 <div class="wrap">
 <main>
+  <section id="profile" class="block" aria-labelledby="profile-h">
+    <div class="profile">
+      <h2 id="profile-h">Executive profile</h2>
+      <div class="prose">
+        <p>I am a technology executive with more than 20 years of experience spanning software engineering, enterprise architecture, digital platforms, technology strategy and organizational leadership.</p>
+        <p>I currently lead Entertainment Technology at stc, with responsibility across engineering, architecture, infrastructure, operations, platform reliability and technology delivery for stc tv and entertainment platforms.</p>
+        <p>My experience has given me a perspective from both sides of technology leadership. I started by building systems myself, then moved through business analysis, digital channels, technology demand management and enterprise applications before taking broader technology leadership responsibilities.</p>
+        <p>A recurring theme throughout my career has been building sustainable internal capability. I have established in-house engineering teams, transitioned strategic platforms away from vendor dependency, modernized technology estates and introduced AI and automation to improve efficiency and operational performance.</p>
+        <p>I focus on the decisions that matter most at technology leadership level: where to build versus buy, how architecture supports business growth, how to develop strong engineering organizations, and how technology investment translates into customer and business value.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="career" class="block" aria-labelledby="career-h">
     <div class="career-head">
       <h2 id="career-h">Career</h2>
