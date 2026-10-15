@@ -120,10 +120,35 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;paddin
 footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:center}
 
 @media (max-width:760px){
-  .hero-img{width:100%;opacity:.35;object-position:62% 20%}
-  .hero-fade{background:linear-gradient(180deg,rgba(35,28,21,.55) 0%,rgba(35,28,21,.85) 100%)}
-  .hero-body{min-height:0;padding:56px 0 130px}
-  .lead{font-size:18px}
+  /* photo becomes a visible portrait band at the top; text sits below it */
+  .hero-media{left:0;transform:none;top:96px;bottom:auto;height:420px}
+  .hero-img{width:100%;object-position:57% 12%}
+  .hero-fade{background:linear-gradient(180deg,#231C15 0%,rgba(35,28,21,0) 14%,rgba(35,28,21,0) 46%,rgba(35,28,21,.9) 72%,#231C15 86%)}
+  .hero-bottom{height:140px}
+  header{padding:12px 0;gap:0 12px}
+  nav{gap:0 16px;font-size:14px}
+  .hero-body{min-height:0;padding:300px 0 96px}
+  .hero-text{gap:18px}
+  .eyebrow{font-size:13px;align-items:flex-start}
+  .eyebrow i{margin-top:5px;flex:0 0 auto}
+  h1{font-size:46px}
+  .lead{font-size:17px}
+  .btns .btn{flex:1 1 0;justify-content:center;padding:0 12px}
+  .btns .btn.primary{flex:1 1 100%}
+  /* career: the list is the control; details open under the tapped role */
+  .bar button{pointer-events:none}
+  .career-body{margin-top:20px}
+  .roles .detail{margin:6px 0 12px;padding:22px}
+  .detail h3{font-size:21px}
+  section.block{padding-top:64px}
+  h2{font-size:28px}
+  .entj .big{font-size:52px}
+  .contact{padding:44px 20px;margin:64px 0 48px}
+  .contact .mail{padding:8px 0}
+}
+@media (max-width:360px){
+  h1{font-size:40px}
+  nav a:nth-child(3){display:none}
 }
 </style>
 </head>
@@ -299,7 +324,7 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
     rb.querySelector('.dot').style.background = colors[r.kind];
     rb.querySelector('b').textContent = r.title;
     rb.querySelector('.t span').textContent = r.org + ' · ' + r.years;
-    rb.addEventListener('click', function () { select(i); });
+    rb.addEventListener('click', function () { select(i, true); });
     li.appendChild(rb); list.appendChild(li); rowBtns.push(rb);
   });
   [2005, 2010, 2015, 2020, 2025].forEach(function (y) {
@@ -307,8 +332,25 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
     s.textContent = y; s.style.left = ((y - START) / SPAN * 100) + '%';
     ticks.appendChild(s);
   });
-  function select(i) {
+  var detail = document.getElementById('detail'), body = document.querySelector('.career-body');
+  var mobile = window.matchMedia('(max-width:760px)');
+  bar.setAttribute('aria-hidden', 'true');
+  barBtns.forEach(function (b) { b.tabIndex = -1; });
+  var current = 0;
+  function place(scroll) {
+    if (mobile.matches) {
+      var li = rowBtns[current].parentNode;
+      if (detail.parentNode !== li) li.appendChild(detail);
+      if (scroll) rowBtns[current].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else if (detail.parentNode !== body) {
+      body.appendChild(detail);
+    }
+  }
+  if (mobile.addEventListener) mobile.addEventListener('change', function () { place(false); });
+  function select(i, fromUser) {
     var r = roles[i];
+    current = i;
+    place(fromUser);
     barBtns.forEach(function (b, j) { b.setAttribute('aria-pressed', String(i === j)); });
     rowBtns.forEach(function (b, j) { b.setAttribute('aria-pressed', String(i === j)); });
     document.getElementById('d-years').textContent = r.years;
