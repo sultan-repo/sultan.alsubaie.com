@@ -161,7 +161,6 @@ h2{margin:0 0 24px;font-size:34px;font-weight:700;letter-spacing:-.02em}
   .btns .btn{flex:1 1 0;justify-content:center;padding:0 12px}
   .btns .btn.primary{flex:1 1 100%}
   /* career: the list is the control; details open under the tapped role */
-  .bar button{pointer-events:none}
   .career-body{margin-top:20px}
   .roles .detail{margin:6px 0 12px;padding:22px}
   .detail h3{font-size:21px}
@@ -374,7 +373,7 @@ h2{margin:0 0 24px;font-size:34px;font-weight:700;letter-spacing:-.02em}
     b.style.width = 'calc(' + width + '% - 2px)';
     b.style.background = colors[r.kind];
     b.setAttribute('aria-label', r.title + ', ' + r.org + ', ' + r.years);
-    b.addEventListener('click', function () { select(i); });
+    b.addEventListener('click', function () { select(i, mobile.matches); });
     bar.appendChild(b); barBtns.push(b);
     var li = document.createElement('li');
     var rb = document.createElement('button');
