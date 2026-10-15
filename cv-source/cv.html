@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sultan Alsubaie · CV</title>
+<style>
+@font-face{font-family:'Plex';src:url('fonts/ibm-plex-sans-latin-400-normal.woff2');font-weight:400}
+@font-face{font-family:'Plex';src:url('fonts/ibm-plex-sans-latin-500-normal.woff2');font-weight:500}
+@font-face{font-family:'Plex';src:url('fonts/ibm-plex-sans-latin-600-normal.woff2');font-weight:600}
+@font-face{font-family:'Plex';src:url('fonts/ibm-plex-sans-latin-700-normal.woff2');font-weight:700}
+@font-face{font-family:'PlexMono';src:url('fonts/ibm-plex-mono-latin-400-normal.woff2');font-weight:400}
+@font-face{font-family:'PlexMono';src:url('fonts/ibm-plex-mono-latin-500-normal.woff2');font-weight:500}
+@page{size:A4;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:'Plex',sans-serif;color:#1E1A17;font-size:9.2pt;line-height:1.45;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.mono{font-family:'PlexMono',monospace}
+.page{width:210mm;height:297mm;display:grid;grid-template-columns:64mm 1fr;grid-template-rows:4mm 1fr;overflow:hidden;break-after:page;position:relative;background:#F7F3EC}
+.page:last-child{break-after:auto}
+.sadu{grid-column:1/3;background:
+  linear-gradient(135deg,transparent 50%,#F7F3EC 50%) 0 100%/3mm 3mm repeat-x,
+  #8C2F23}
+.side{background:#231C15;color:#E9DFD2;padding:11mm 8mm 10mm 9mm;display:flex;flex-direction:column;gap:7mm}
+.main{padding:11mm 12mm 12mm 11mm;display:flex;flex-direction:column}
+.photo{width:46mm;height:46mm;border-radius:4mm;object-fit:cover;object-position:50% 30%;display:block}
+.sh{font-family:'PlexMono',monospace;font-size:6.8pt;letter-spacing:.14em;text-transform:uppercase;color:#E39A82;margin:0 0 2.4mm;padding-bottom:1.6mm;border-bottom:.3mm solid #4A3D33}
+.side p,.side li{margin:0;font-size:8.3pt;line-height:1.45}
+.side ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2.4mm}
+.side b{display:block;color:#FBF6EE;font-weight:600;font-size:8.6pt}
+.side .muted{color:#B9AC9E}
+.contact li{display:flex;flex-direction:column}
+.contact .k{font-family:'PlexMono',monospace;font-size:6.4pt;letter-spacing:.08em;color:#9C8F81;text-transform:uppercase}
+.entj{font-size:22pt;font-weight:700;color:#E6CFA3;letter-spacing:.03em;line-height:1;margin-bottom:1mm}
+.chips{display:flex;flex-wrap:wrap;gap:1.4mm;margin-top:2mm}
+.chips span{border:.25mm solid #5C4C3F;border-radius:10mm;padding:.6mm 2.2mm;font-size:6.8pt;color:#D9CDBF}
+.side .side-foot{margin-top:auto;font-family:'PlexMono',monospace;font-size:6.6pt;color:#8F8476}
+h1{margin:0;font-size:30pt;line-height:1;letter-spacing:-.025em;font-weight:700}
+.title{margin:2.6mm 0 0;font-size:10.5pt;font-weight:500;color:#8C2F23}
+.summary{margin:5mm 0 0;font-size:10pt;line-height:1.55;color:#2E2722;padding-left:4mm;border-left:.8mm solid #8C2F23}
+.h2{display:flex;align-items:center;gap:3mm;margin:7mm 0 3.4mm;font-family:'PlexMono',monospace;font-size:7.4pt;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#8C2F23}
+.h2::after{content:"";flex:1;height:.3mm;background:#DCCFBE}
+.scope{display:grid;grid-template-columns:1fr 1fr;gap:2.6mm 6mm}
+.scope div{display:grid;grid-template-columns:6mm 1fr;align-items:baseline}
+.scope .n{font-family:'PlexMono',monospace;font-size:7pt;color:#8C2F23}
+.scope b{font-size:8.9pt;font-weight:600}
+.scope span.d{grid-column:2;font-size:8pt;color:#5E554D;line-height:1.35}
+.job{position:relative;padding:0 0 4.2mm 6mm;break-inside:avoid}
+.job::before{content:"";position:absolute;left:0;top:1.6mm;width:2.2mm;height:2.2mm;border-radius:.5mm;background:var(--c,#8C2F23)}
+.job::after{content:"";position:absolute;left:1mm;top:4.6mm;bottom:0;width:.25mm;background:#DCCFBE}
+.job.last::after{display:none}
+.jh{display:flex;justify-content:space-between;gap:4mm;align-items:baseline}
+.jh b{font-size:10.2pt;font-weight:600;line-height:1.25}
+.jh .y{font-family:'PlexMono',monospace;font-size:7.6pt;color:#6B6158;white-space:nowrap}
+.org{font-size:8.6pt;font-weight:500;color:#8C2F23;margin-top:.4mm}
+.job p{margin:1.4mm 0 1.2mm;color:#3D3530}
+.job ul{margin:0;padding:0;list-style:none}
+.job li{position:relative;padding-left:3.6mm;margin:.7mm 0}
+.job li::before{content:"";position:absolute;left:0;top:1.9mm;width:1.3mm;height:1.3mm;background:#8C2F23;transform:rotate(45deg)}
+.timeline{margin-top:1mm}
+.tl-bar{position:relative;height:5mm;background:#EFE7DB;border-radius:1.2mm;overflow:hidden}
+.tl-bar i{position:absolute;top:.8mm;bottom:.8mm;border-radius:.6mm}
+.tl-ticks{position:relative;height:4mm;font-family:'PlexMono',monospace;font-size:6.4pt;color:#6B6158;margin-top:1mm}
+.tl-ticks span{position:absolute;transform:translateX(-50%)}
+.legend{display:flex;gap:5mm;font-size:7.2pt;color:#5E554D;margin-top:1.4mm}
+.legend span{display:inline-flex;align-items:center;gap:1.4mm}
+.legend i{width:2.4mm;height:2.4mm;border-radius:.5mm;display:inline-block}
+.foot{margin-top:auto;display:flex;justify-content:space-between;font-family:'PlexMono',monospace;font-size:6.8pt;color:#8F8476;padding-top:3mm;border-top:.3mm solid #DCCFBE}
+.cont{font-family:'PlexMono',monospace;font-size:7pt;color:#8F8476;margin:0 0 2mm}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<section class="page">
+  <div class="sadu"></div>
+  <aside class="side">
+    <img class="photo" src="photo.jpg" alt="">
+    <div>
+      <p class="sh">Contact</p>
+      <ul class="contact">
+        <li><span class="k">Email</span>sultan@alsubaie.com</li>
+        <li><span class="k">LinkedIn</span>linkedin.com/in/alsubaie</li>
+        <li><span class="k">Web</span>sultan.alsubaie.com</li>
+        <li><span class="k">Location</span>Riyadh, Saudi Arabia</li>
+      </ul>
+    </div>
+    <div>
+      <p class="sh">Education</p>
+      <ul>
+        <li><b>MSc, Advanced Computer Science</b><span class="muted">The University of Manchester, UK · 2007 – 2008</span></li>
+        <li><b>BSc, Computer Science</b><span class="muted">Prince Sultan University · 2000 – 2005</span></li>
+      </ul>
+    </div>
+    <div>
+      <p class="sh">Credentials</p>
+      <ul>
+        <li><b>PMP</b><span class="muted">Project Management Institute</span></li>
+        <li><b>ITIL</b><span class="muted">IT service management</span></li>
+      </ul>
+    </div>
+    <div>
+      <p class="sh">Personality type</p>
+      <div class="entj">ENTJ</div>
+      <p class="muted">The Commander: strategic and decisive; organises people and resources around long-range goals.</p>
+    </div>
+  </aside>
+  <main class="main">
+    <h1>Sultan Alsubaie</h1>
+    <p class="title">General Manager, Entertainment Technology · stc</p>
+    <p class="summary">Technology executive with twenty years from code to the leadership table. I set technology strategy, lead AI adoption, build the teams that own it, and run platforms for millions of customers at Saudi Arabia’s largest telecom group.</p>
+
+    <div class="h2">Scope of leadership</div>
+    <div class="scope">
+      <div><span class="n">01</span><b>Technology strategy</b><span class="d">Entertainment and sales platforms</span></div>
+      <div><span class="n">02</span><b>Platform modernisation</b><span class="d">Apps, cloud, infrastructure, streaming</span></div>
+      <div><span class="n">03</span><b>Build vs. buy</b><span class="d">Vendor-managed to in-house platforms</span></div>
+      <div><span class="n">04</span><b>Engineering organisation</b><span class="d">In-house teams with Saudi talent</span></div>
+      <div><span class="n">05</span><b>Reliability at scale</b><span class="d">High-volume platforms, major migration</span></div>
+      <div><span class="n">06</span><b>AI adoption</b><span class="d">Engineering, operations, support, customers</span></div>
+      <div><span class="n">07</span><b>Budget &amp; value</b><span class="d">Multi-million SAR technology budgets</span></div>
+      <div><span class="n">08</span><b>Architecture &amp; governance</b><span class="d">Continuity, vendors, Agile delivery</span></div>
+    </div>
+
+    <div class="h2">Experience</div>
+    <div class="job"><div class="jh"><b>General Manager, Entertainment Technology</b><span class="y">Nov 2025 – present</span></div><div class="org">stc</div>
+      <p>Leading the technology function for stc tv and entertainment platforms, end to end: engineering, architecture, infrastructure, operations, reliability and delivery.</p>
+      <ul><li>Defining and executing the technology strategy for entertainment and digital platforms.</li><li>Modernising applications, cloud and on-premise infrastructure, integrations and streaming.</li><li>Driving scale and reliability on high-volume platforms, including a major platform migration.</li><li>Leading AI and automation adoption across engineering, operations, support and customer features.</li><li>Owning governance, architecture, service continuity and vendor performance.</li></ul></div>
+    <div class="job last" style="--c:#D9A07A"><div class="jh"><b>General Manager, Business Applications</b><span class="y">Mar 2019 – Nov 2025</span></div><div class="org">channels by stc</div>
+      <p>Technology strategy and delivery for sales applications at one of Saudi Arabia’s largest telecom operators.</p>
+      <ul><li>Built and led an in-house development team, reducing reliance on external vendors.</li><li>Moved critical enterprise solutions from vendor-managed to in-house platforms: significant cost savings and faster deployment.</li><li>Designed AI-powered process automation that cut operational workload.</li><li>Led Qwik, winner of the Middle East Technology Excellence Award 2022.</li><li>Managed multi-million SAR technology budgets.</li></ul></div>
+
+    <div class="foot"><span>Sultan Alsubaie · CV</span><span>1 / 2</span></div>
+  </main>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+  <div class="sadu"></div>
+  <aside class="side">
+    <div>
+      <p class="sh">How I lead</p>
+      <ul>
+        <li><b>Speaks business and engineering</b><span class="muted">Turns commercial goals into architecture and roadmaps.</span></li>
+        <li><b>Thinks in platforms, not projects</b><span class="muted">Decides what to build, buy, modernise or retire.</span></li>
+        <li><b>Grows the next leaders</b><span class="muted">Develops managers who can run the function without him.</span></li>
+        <li><b>Has done the jobs he leads</b><span class="muted">Programmer, analyst, project manager, director, general manager.</span></li>
+      </ul>
+    </div>
+    <div>
+      <p class="sh">Recognition</p>
+      <ul>
+        <li><b>Middle East Technology Excellence Award</b><span class="muted">Qwik sales platform, channels by stc · 2022</span></li>
+      </ul>
+    </div>
+    <div>
+      <p class="sh">Industries</p>
+      <div class="chips"><span>Telecom</span><span>Entertainment &amp; streaming</span><span>Government</span></div>
+    </div>
+    <p class="side-foot">sultan.alsubaie.com</p>
+  </aside>
+  <main class="main">
+    <div class="h2" style="margin-top:0">Career at a glance</div>
+    <div class="timeline">
+      <div class="tl-bar">
+        <i style="left:0.9%;width:17.1%;background:#8C2F23"></i>
+        <i style="left:18.2%;width:2.8%;background:#3F4E5C"></i>
+        <i style="left:21.2%;width:9.5%;background:#8C2F23"></i>
+        <i style="left:30.9%;width:7.4%;background:#3F4E5C"></i>
+        <i style="left:38.5%;width:11.5%;background:#8C2F23"></i>
+        <i style="left:50.2%;width:14.5%;background:#8C2F23"></i>
+        <i style="left:64.9%;width:29.8%;background:#D9A07A"></i>
+        <i style="left:94.9%;width:4.2%;background:#8C2F23"></i>
+      </div>
+      <div class="tl-ticks"><span style="left:0.9%">2005</span><span style="left:23.4%">2010</span><span style="left:45.9%">2015</span><span style="left:68.5%">2020</span><span style="left:91%">2025</span></div>
+      <div class="legend"><span><i style="background:#8C2F23"></i>stc</span><span><i style="background:#D9A07A"></i>channels by stc</span><span><i style="background:#3F4E5C"></i>Government</span></div>
+    </div>
+
+    <div class="h2">Experience, continued</div>
+    <div class="job"><div class="jh"><b>Director, Consumer Demand Management</b><span class="y">Dec 2015 – Dec 2018</span></div><div class="org">stc</div>
+      <p>The primary IT interface for every project from stc’s Consumer sector, guiding strategy, architecture and delivery of large transformation programmes.</p>
+      <ul><li>Directed enterprise solution blueprints aligned with business goals and architecture standards.</li><li>Helped set IT vision and strategy for stc’s long-term transformation.</li><li>Led the adoption of Agile delivery.</li></ul></div>
+    <div class="job"><div class="jh"><b>Section Manager, eServices Demand Management</b><span class="y">May 2013 – Dec 2015</span></div><div class="org">stc</div>
+      <p>Customer-facing digital channels: the stc portal, MySTC portal and app, and the internal portal.</p>
+      <ul><li>Kept platforms stable, secure and scalable for millions of users.</li><li>Introduced continuous improvement to speed up releases and reduce downtime.</li></ul></div>
+    <div class="job" style="--c:#3F4E5C"><div class="jh"><b>Project Manager</b><span class="y">Aug 2011 – Apr 2013</span></div><div class="org">Ministry of Foreign Affairs</div>
+      <ul><li>E-services for Protocol and Security Affairs; in-house applications that replaced manual processes.</li><li>Led RFP preparation and vendor evaluation for outsourced development.</li></ul></div>
+    <div class="job"><div class="jh"><b>Senior Business Analyst</b><span class="y">Jun 2009 – Aug 2011</span></div><div class="org">stc</div>
+      <ul><li>IT solutions for mobile services, integrating enterprise applications with core network elements.</li></ul></div>
+    <div class="job" style="--c:#3F4E5C"><div class="jh"><b>Senior Business Analyst</b><span class="y">Oct 2008 – Jun 2009</span></div><div class="org">Ministry of Education</div>
+      <ul><li>IT solutions for the Ministry’s portal and e-services; RFPs and vendor evaluation.</li></ul></div>
+    <div class="job last"><div class="jh"><b>Programmer</b><span class="y">Dec 2005 – Jul 2007</span></div><div class="org">stc</div>
+      <ul><li>Mediation systems for GSM and landline billing on UNIX.</li></ul></div>
+
+    <div class="foot"><span>Sultan Alsubaie · CV</span><span>2 / 2</span></div>
+  </main>
+</section>
+</body>
+</html>
