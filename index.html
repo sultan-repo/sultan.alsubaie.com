@@ -15,18 +15,29 @@
 <meta property="og:image" content="https://sultan.alsubaie.com/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Sultan Alsubaie, Technology Executive">
+<meta property="og:site_name" content="Sultan Alsubaie">
+<meta property="og:locale" content="en_US">
+<meta property="profile:first_name" content="Sultan">
+<meta property="profile:last_name" content="Alsubaie">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sultan Alsubaie · Technology Executive">
+<meta name="twitter:description" content="Technology strategy, AI adoption, in-house engineering and platforms for millions of customers.">
+<meta name="twitter:image" content="https://sultan.alsubaie.com/og.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23231C15'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' fill='%23F4ECE1' text-anchor='middle'%3ESA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Sultan Alsubaie","jobTitle":"General Manager, Entertainment Technology","worksFor":{"@type":"Organization","name":"stc"},"address":{"@type":"PostalAddress","addressLocality":"Riyadh","addressCountry":"SA"},"email":"mailto:sultan@alsubaie.com","url":"https://sultan.alsubaie.com/","image":"https://sultan.alsubaie.com/og.jpg","sameAs":["https://www.linkedin.com/in/alsubaie/"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"The University of Manchester"},{"@type":"CollegeOrUniversity","name":"Prince Sultan University"}]}
+{"@context":"https://schema.org","@type":"Person","name":"Sultan Alsubaie","jobTitle":"General Manager, Entertainment Technology","worksFor":{"@type":"Organization","name":"stc"},"address":{"@type":"PostalAddress","addressLocality":"Riyadh","addressCountry":"SA"},"email":"sultan@alsubaie.com","description":"Technology executive; General Manager, Entertainment Technology at stc. Technology strategy, enterprise architecture, digital platforms and AI adoption.","url":"https://sultan.alsubaie.com/","image":"https://sultan.alsubaie.com/og.jpg","sameAs":["https://www.linkedin.com/in/alsubaie/"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"The University of Manchester"},{"@type":"CollegeOrUniversity","name":"Prince Sultan University"}]}
 </script>
 <style>
 :root{--bg:#F7F3EC;--ink:#1E1A17;--muted:#5E554D;--soft:#6B6158;--line:#E2D9CC;--line2:#EFE7DB;--card:#FFFDF9;--accent:#8C2F23;--dark:#231C15;--dark2:#1F1B19;--cream:#F4ECE1}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+.skip{position:absolute;left:16px;top:-60px;z-index:10;background:var(--cream);color:var(--dark);padding:10px 16px;border-radius:8px;font-weight:600;text-decoration:none}
+.skip:focus{top:20px}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:var(--ink)}a:hover{color:var(--accent)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
@@ -74,6 +85,8 @@ h2{margin:0 0 24px;font-size:34px;font-weight:700;letter-spacing:-.02em}
 .bar button{position:absolute;top:8px;bottom:8px;border:0;border-radius:6px;cursor:pointer;padding:0;opacity:.55;transition:opacity .15s,top .15s,bottom .15s}
 .bar button:hover{opacity:.8}
 .bar button[aria-pressed="true"]{top:0;bottom:0;opacity:1;box-shadow:0 0 0 2px var(--ink)}
+.study,.study-key{background:repeating-linear-gradient(135deg,#8F8476 0 2px,transparent 2px 5px);box-shadow:inset 0 0 0 1px #8F8476}
+.study{position:absolute;top:8px;bottom:8px;border-radius:6px;pointer-events:none}
 .ticks{position:relative;height:22px;margin-top:6px;font-size:12px;color:var(--soft)}
 .ticks span{position:absolute;transform:translateX(-50%)}
 .career-body{display:flex;flex-wrap:wrap;gap:28px;margin-top:28px}
@@ -134,7 +147,7 @@ h2{margin:0 0 24px;font-size:34px;font-weight:700;letter-spacing:-.02em}
 footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:0 0 40px;font-size:14px;color:var(--soft)}
 footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:center}
 
-@media (max-width:760px){
+@media (max-width:900px){
   /* photo becomes a visible portrait band at the top; text sits below it */
   .hero-media{left:0;transform:none;top:96px;bottom:auto;height:420px}
   .hero-img{width:100%;object-position:57% 12%}
@@ -161,11 +174,21 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
   h2{font-size:28px}
   .entj .big{font-size:52px}
   .contact{padding:44px 20px;margin:64px 0 48px}
-  .contact .mail{padding:8px 0}
+  .contact .mail{padding:12px 0}
 }
 @media (max-width:360px){
   h1{font-size:40px}
-  nav a:nth-child(3){display:none}
+}
+@media print{
+  @page{margin:14mm}
+  body{background:#fff}
+  .sadu,.hero-media,.hero-fade,.hero-bottom,.hero-edge,nav,.btns,.read-more,.skip,.bar,.ticks,.legend,.contact .row,footer a{display:none!important}
+  .hero{background:none;color:#1E1A17}.hero-body{min-height:0;padding:16px 0}
+  h1,.brand,.brand b{color:#1E1A17}.lead,.eyebrow,.xp-text p,.loc{color:#3D3530}
+  .xp,.xp.closed{grid-template-rows:1fr}.xp.closed .xp-in{visibility:visible}
+  .detail{display:none}.roles li button{min-height:0}
+  section.block{padding-top:24px;break-inside:avoid-page}
+  .entj,.contact{background:#fff;color:#1E1A17;border:1px solid #DCCFBE}.entj p,.entj .k,.entj .nm,.contact h2{color:#3D3530}
 }
 </style>
 </head>
@@ -177,6 +200,7 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
   <rect width="100%" height="14" fill="url(#sadu)"/>
 </svg>
 
+<a class="skip" href="#career">Skip to content</a>
 <div id="top" class="hero">
   <div class="hero-media">
     <img class="hero-img" src="hero.webp" alt="Portrait of Sultan Alsubaie" fetchpriority="high">
@@ -211,7 +235,7 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
           </div>
         </div>
         <div class="btns">
-          <a class="btn primary" href="Sultan-Alsubaie-CV.pdf" download>
+          <a class="btn primary" href="Sultan-Alsubaie-CV.pdf" type="application/pdf" download>
             <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
             Download PDF</a>
           <a class="btn" href="https://www.linkedin.com/in/alsubaie/">LinkedIn</a>
@@ -232,6 +256,7 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
         <span><i style="background:#8C2F23"></i>stc</span>
         <span><i style="background:#D9A07A"></i>channels by stc</span>
         <span><i style="background:#3F4E5C"></i>Government</span>
+        <span><i class="study-key"></i>MSc, Manchester</span>
       </div>
     </div>
     <div class="bar" id="bar"></div>
@@ -307,32 +332,33 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
 
 <script>
 (function () {
-  var START = 2004.8, END = 2027, SPAN = END - START;
+  var d0 = new Date(), NOW = d0.getFullYear() + d0.getMonth() / 12;
+  var PAD = 0.25, START = 2005.92 - PAD, END = NOW + PAD, SPAN = END - START;
   var colors = { stc: '#8C2F23', channels: '#D9A07A', gov: '#3F4E5C' };
   var roles = [
-    { title: 'General Manager, Entertainment Technology', org: 'stc', kind: 'stc', years: 'Nov 2025 – now', from: 2025.83, to: 2026.8,
+    { title: 'General Manager, Entertainment Technology', org: 'stc', kind: 'stc', years: 'Nov 2025 – present', from: 2025.83, to: NOW,
       scope: 'Accountable for the technology behind stc tv and stc’s entertainment platforms.',
-      wins: ['Defining and executing the technology strategy for entertainment and digital platforms.', 'Modernizing applications, cloud and on-premise infrastructure, integrations and streaming platforms.', 'Driving scale, performance and reliability on high-volume platforms, including a major platform migration.', 'Leading AI and automation adoption across engineering, operations, support and customer-facing features.', 'Building in-house engineering capability for long-term platform ownership.'] },
+      wins: ['Defining and executing the technology strategy for entertainment and digital platforms.', 'Modernizing applications, cloud and on-premises infrastructure, integrations and streaming platforms.', 'Driving scale, performance and reliability on high-volume platforms, including a major platform migration.', 'Leading AI and automation adoption across engineering, operations, support and customer-facing features.', 'Building in-house engineering capability for long-term platform ownership.'] },
     { title: 'General Manager, Business Applications', org: 'channels by stc', kind: 'channels', years: 'Mar 2019 – Nov 2025', from: 2019.17, to: 2025.83,
       scope: 'Technology strategy and delivery for stc’s sales applications.',
       wins: ['Built and led an in-house development team, reducing reliance on external vendors.', 'Migrated critical enterprise solutions from vendor-managed to in-house platforms: significant cost savings and faster deployment.', 'Designed AI-powered process automation that cut operational workload.', 'Led Qwik, winner of the Middle East Technology Excellence Award 2022.', 'Managed multi-million SAR technology budgets.'] },
-    { title: 'Director, Consumer Demand Management', org: 'stc', kind: 'stc', years: 'Dec 2015 – Dec 2018', from: 2015.92, to: 2019.17,
+    { title: 'Director, Consumer Demand Management', org: 'stc', kind: 'stc', years: 'Dec 2015 – Dec 2018', from: 2015.92, to: 2018.92,
       scope: 'The primary IT interface for every project from stc’s Consumer sector, guiding strategy, architecture and delivery of large transformation programs.',
       wins: ['Directed enterprise solution blueprints aligned with business goals and architecture standards.', 'Helped set IT vision and strategy for stc’s long-term transformation.', 'Led the adoption of Agile delivery.'] },
     { title: 'Section Manager, eServices Demand Management', org: 'stc', kind: 'stc', years: 'May 2013 – Dec 2015', from: 2013.33, to: 2015.92,
-      scope: 'Customer-facing digital channels: the stc portal, MySTC portal and app, and the internal portal.',
+      scope: 'Customer-facing digital channels: the stc portal, the mystc portal and app, and the internal portal.',
       wins: ['Led cross-functional teams across multiple digital channels.', 'Kept platforms stable, secure and scalable for millions of users.', 'Introduced continuous improvement to speed up releases and reduce downtime.'] },
     { title: 'Project Manager', org: 'Ministry of Foreign Affairs', kind: 'gov', years: 'Aug 2011 – Apr 2013', from: 2011.58, to: 2013.25,
-      scope: 'E-services for Protocol Affairs and Security Affairs: secure, mission-critical government applications.',
+      scope: 'E-services for Protocol and Security Affairs: secure, mission-critical government applications.',
       wins: ['Delivered in-house applications that replaced manual processes.', 'Led RFP preparation and vendor evaluation for outsourced development.'] },
     { title: 'Senior Business Analyst', org: 'stc', kind: 'stc', years: 'Jun 2009 – Aug 2011', from: 2009.42, to: 2011.58,
       scope: 'IT solutions for mobile services, integrating enterprise applications with core telecom network elements.',
       wins: ['Delivered solutions that expanded service capabilities and cut operational delays.', 'Streamlined how service requests flowed between business and IT.'] },
     { title: 'Senior Business Analyst', org: 'Ministry of Education', kind: 'gov', years: 'Oct 2008 – Jun 2009', from: 2008.75, to: 2009.42,
       scope: 'Designed and analyzed IT solutions for the Ministry’s portal and e-services.',
-      wins: ['Drafted RFPs and evaluated vendor proposals for digital service projects.', 'Solution designs that improved services for students, faculty and staff nationwide.'] },
-    { title: 'Programmer', org: 'stc', kind: 'stc', years: 'Dec 2005 – Jul 2007', from: 2005, to: 2008.75,
-      scope: 'Developed mediation systems for GSM and landline billing on UNIX.',
+      wins: ['Drafted RFPs and evaluated vendor proposals for digital service projects.', 'Designed solutions that improved services for students, teachers and staff.'] },
+    { title: 'Programmer', org: 'stc', kind: 'stc', years: 'Dec 2005 – Jul 2007', from: 2005.92, to: 2007.54,
+      scope: 'Developed and maintained billing mediation systems for GSM and fixed-line services on UNIX.',
       wins: ['Delivered change requests that improved billing efficiency and cut errors.', 'Made mission-critical telecom billing more reliable.'] }
   ];
   var bar = document.getElementById('bar'), list = document.getElementById('roles'), ticks = document.getElementById('ticks');
@@ -357,13 +383,19 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
     rb.addEventListener('click', function () { select(i, true); });
     li.appendChild(rb); list.appendChild(li); rowBtns.push(rb);
   });
-  [2005, 2010, 2015, 2020, 2025].forEach(function (y) {
+  var study = document.createElement('div');
+  study.className = 'study';
+  study.style.left = 'calc(' + ((2007.67 - START) / SPAN * 100) + '% + 1px)';
+  study.style.width = 'calc(' + ((2008.67 - 2007.67) / SPAN * 100) + '% - 2px)';
+  study.title = 'MSc, The University of Manchester, 2007 – 2008';
+  bar.appendChild(study);
+  [2010, 2015, 2020, 2025].forEach(function (y) {
     var s = document.createElement('span');
     s.textContent = y; s.style.left = ((y - START) / SPAN * 100) + '%';
     ticks.appendChild(s);
   });
   var detail = document.getElementById('detail'), body = document.querySelector('.career-body');
-  var mobile = window.matchMedia('(max-width:760px)');
+  var mobile = window.matchMedia('(max-width:900px)');
   bar.setAttribute('aria-hidden', 'true');
   barBtns.forEach(function (b) { b.tabIndex = -1; });
   var current = 0;
@@ -399,7 +431,7 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
   var xp=document.getElementById('xp'), btn=document.getElementById('xp-open');
   if(!xp||!btn) return;
   var hero=document.querySelector('.hero'), media=document.querySelector('.hero-media'), lbl=btn.querySelector('span');
-  var mobile=window.matchMedia('(max-width:760px)');
+  var mobile=window.matchMedia('(max-width:900px)');
   function lock(on){
     // keep the photo at its closed size on desktop so it doesn't zoom as the band grows
     if(mobile.matches){ media.style.height=''; media.style.bottom=''; return; }
