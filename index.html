@@ -108,22 +108,21 @@ h2{margin:0 0 24px;font-size:34px;font-weight:700;letter-spacing:-.02em}
 .traits{flex:2 1 520px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .traits div{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:8px}
 .traits b{font-size:17px;font-weight:600}.traits span{font-size:15px;line-height:1.55;color:#4F463F}
-.profile{display:grid;grid-template-columns:minmax(200px,1fr) 2.2fr;gap:24px 64px;align-items:start}
-.profile h2{margin:0;position:sticky;top:24px}
-.prose p{margin:0 0 18px;font-size:17px;line-height:1.7;color:#3D3530;max-width:68ch}
-.prose p:last-of-type{margin-bottom:0}
 .read-more{align-self:flex-start;margin-top:-8px;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0;border:0;background:none;font:inherit;font-size:15px;font-weight:600;color:#E8A58D;cursor:pointer}
-.read-more:hover span,.xp-close:hover span{text-decoration:underline;text-underline-offset:4px}
-.read-more:focus-visible,.xp-close:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
-.read-more svg,.xp-close svg{transition:transform .25s}
+.read-more:hover span{text-decoration:underline;text-underline-offset:4px}
+.read-more:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+.read-more svg{transition:transform .25s}
 .read-more[aria-expanded="true"] svg{transform:rotate(180deg)}
-.xp-close{margin-top:24px;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0;border:0;background:none;font:inherit;font-size:15px;font-weight:600;color:var(--accent);cursor:pointer}
-.xp-close svg{transform:rotate(180deg)}
-.xp{display:grid;grid-template-rows:1fr;transition:grid-template-rows .45s ease}
+.xp{display:grid;grid-template-rows:1fr;margin-top:-14px;transition:grid-template-rows .45s ease}
 .xp-in{min-height:0;overflow:hidden}
 .xp.closed{grid-template-rows:0fr}
 .xp.closed .xp-in{visibility:hidden;transition:visibility 0s .45s}
-@media (prefers-reduced-motion:reduce){.xp,.read-more svg,.xp-close svg{transition:none}}
+.xp-text{max-width:570px;border-left:2px solid rgba(232,165,141,.45);padding:6px 0 6px 20px;margin:4px 0 8px}
+.xp-text p{margin:0 0 14px;font-size:16px;line-height:1.7;color:#D9CDBF}
+.xp-text p:last-child{margin:0}
+.hero-media::after{content:"";position:absolute;left:0;right:0;bottom:0;height:260px;background:linear-gradient(180deg,rgba(35,28,21,0),#231C15);opacity:0;transition:opacity .3s}
+.hero.is-open .hero-media::after{opacity:1}
+@media (prefers-reduced-motion:reduce){.xp,.read-more svg,.hero-media::after{transition:none}}
 .edu{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .edu li{border-top:2px solid var(--ink);padding-top:16px;display:flex;flex-direction:column;gap:4px}
 .edu b{font-size:17px;font-weight:600}.edu span{font-size:14px;color:var(--soft)}
@@ -157,9 +156,8 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
   .roles .detail{margin:6px 0 12px;padding:22px}
   .detail h3{font-size:21px}
   section.block{padding-top:64px}
-  .profile{grid-template-columns:1fr;gap:16px}
-  .profile h2{position:static}
-  .prose p{font-size:16px}
+  .xp-text{padding-left:16px}
+  .xp-text p{font-size:15.5px}
   h2{font-size:28px}
   .entj .big{font-size:52px}
   .contact{padding:44px 20px;margin:64px 0 48px}
@@ -202,6 +200,17 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
         <h1 id="hero-h">Sultan<br>Alsubaie</h1>
         <p class="lead">Technology executive with twenty years from code to the leadership table. I set technology strategy, lead AI adoption, build the teams that own it, and run platforms for millions of customers at Saudi Arabia’s largest telecom group.</p>
         <button class="read-more" id="xp-open" type="button" aria-expanded="true" aria-controls="xp" hidden><span>Read full profile</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="xp" id="xp">
+          <div class="xp-in">
+            <div class="xp-text" id="profile" role="region" aria-label="Executive profile">
+              <p>I am a technology executive with more than 20 years of experience spanning software engineering, enterprise architecture, digital platforms, technology strategy and organizational leadership.</p>
+              <p>I currently lead Entertainment Technology at stc, with responsibility across engineering, architecture, infrastructure, operations, platform reliability and technology delivery for stc tv and entertainment platforms.</p>
+              <p>My experience has given me a perspective from both sides of technology leadership. I started by building systems myself, then moved through business analysis, digital channels, technology demand management and enterprise applications before taking broader technology leadership responsibilities.</p>
+              <p>A recurring theme throughout my career has been building sustainable internal capability. I have established in-house engineering teams, transitioned strategic platforms away from vendor dependency, modernized technology estates and introduced AI and automation to improve efficiency and operational performance.</p>
+              <p>I focus on the decisions that matter most at technology leadership level: where to build versus buy, how architecture supports business growth, how to develop strong engineering organizations, and how technology investment translates into customer and business value.</p>
+            </div>
+          </div>
+        </div>
         <div class="btns">
           <a class="btn primary" href="Sultan-Alsubaie-CV.pdf" download>
             <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
@@ -217,24 +226,6 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
 
 <div class="wrap">
 <main>
-  <div class="xp" id="xp">
-  <div class="xp-in">
-  <section id="profile" class="block" aria-labelledby="profile-h">
-    <div class="profile">
-      <h2 id="profile-h">Executive profile</h2>
-      <div class="prose">
-        <p>I am a technology executive with more than 20 years of experience spanning software engineering, enterprise architecture, digital platforms, technology strategy and organizational leadership.</p>
-        <p>I currently lead Entertainment Technology at stc, with responsibility across engineering, architecture, infrastructure, operations, platform reliability and technology delivery for stc tv and entertainment platforms.</p>
-        <p>My experience has given me a perspective from both sides of technology leadership. I started by building systems myself, then moved through business analysis, digital channels, technology demand management and enterprise applications before taking broader technology leadership responsibilities.</p>
-        <p>A recurring theme throughout my career has been building sustainable internal capability. I have established in-house engineering teams, transitioned strategic platforms away from vendor dependency, modernized technology estates and introduced AI and automation to improve efficiency and operational performance.</p>
-        <p>I focus on the decisions that matter most at technology leadership level: where to build versus buy, how architecture supports business growth, how to develop strong engineering organizations, and how technology investment translates into customer and business value.</p>
-        <button class="xp-close" id="xp-close" type="button" aria-controls="xp" hidden><span>Close profile</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
-      </div>
-    </div>
-  </section>
-  </div>
-  </div>
-
   <section id="career" class="block" aria-labelledby="career-h">
     <div class="career-head">
       <h2 id="career-h">Career</h2>
@@ -406,25 +397,27 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
 })();
 
 (function(){
-  var xp=document.getElementById('xp'), open=document.getElementById('xp-open'), close=document.getElementById('xp-close');
-  if(!xp||!open||!close) return;
-  var lbl=open.querySelector('span');
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function set(isOpen){
-    xp.classList.toggle('closed',!isOpen);
-    open.setAttribute('aria-expanded',isOpen?'true':'false');
-    lbl.textContent=isOpen?'Hide full profile':'Read full profile';
+  var xp=document.getElementById('xp'), btn=document.getElementById('xp-open');
+  if(!xp||!btn) return;
+  var hero=document.querySelector('.hero'), media=document.querySelector('.hero-media'), lbl=btn.querySelector('span');
+  var mobile=window.matchMedia('(max-width:760px)');
+  function lock(on){
+    // keep the photo at its closed size on desktop so it doesn't zoom as the band grows
+    if(mobile.matches){ media.style.height=''; media.style.bottom=''; return; }
+    if(on){ media.style.height=media.offsetHeight+'px'; media.style.bottom='auto'; }
+    else { media.style.height=''; media.style.bottom=''; }
   }
-  function show(){
-    set(true);
-    setTimeout(function(){ document.getElementById('profile').scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'}); }, reduce?0:120);
+  function set(open){
+    if(open) lock(true);
+    xp.classList.toggle('closed',!open);
+    hero.classList.toggle('is-open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    lbl.textContent=open?'Show less':'Read full profile';
+    if(!open) setTimeout(function(){ if(btn.getAttribute('aria-expanded')==='false') lock(false); }, 460);
   }
-  set(location.hash==='#profile'); open.hidden=false; close.hidden=false;
-  open.addEventListener('click',function(){ open.getAttribute('aria-expanded')==='true' ? set(false) : show(); });
-  close.addEventListener('click',function(){
-    open.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
-    setTimeout(function(){ set(false); open.focus({preventScroll:true}); }, reduce?0:350);
-  });
+  set(location.hash==='#profile'); btn.hidden=false;
+  btn.addEventListener('click',function(){ set(btn.getAttribute('aria-expanded')!=='true'); });
+  mobile.addEventListener && mobile.addEventListener('change',function(){ lock(btn.getAttribute('aria-expanded')==='true'); });
 })();
 </script>
 </body>
