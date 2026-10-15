@@ -311,7 +311,10 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
 <script>
 (function () {
   var d0 = new Date(), NOW = d0.getFullYear() + d0.getMonth() / 12;
-  var PAD = 0.25, START = 2005.92 - PAD, END = NOW + PAD, SPAN = END - START;
+  // the Sep 2007 – Oct 2008 study year is left out of the axis so the roles sit side by side
+  var CUT_A = 2007.67, CUT_B = 2008.75, CUT = CUT_B - CUT_A;
+  function t(x) { return x <= CUT_A ? x : (x >= CUT_B ? x - CUT : CUT_A); }
+  var PAD = 0.25, START = 2005.92 - PAD, END = NOW + PAD, SPAN = t(END) - START;
   var colors = { stc: '#8C2F23', channels: '#D9A07A', gov: '#3F4E5C' };
   var roles = [
     { title: 'General Manager, Entertainment Technology', org: 'stc', kind: 'stc', years: 'Nov 2025 – present', from: 2025.83, to: NOW,
@@ -342,7 +345,7 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
   var bar = document.getElementById('bar'), list = document.getElementById('roles'), ticks = document.getElementById('ticks');
   var barBtns = [], rowBtns = [];
   roles.forEach(function (r, i) {
-    var left = (r.from - START) / SPAN * 100, width = Math.max((r.to - r.from) / SPAN * 100, 1.2);
+    var left = (t(r.from) - START) / SPAN * 100, width = Math.max((t(r.to) - t(r.from)) / SPAN * 100, 1.2);
     var b = document.createElement('button');
     b.type = 'button';
     b.style.left = 'calc(' + left + '% + 1px)';
@@ -363,7 +366,7 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
   });
   [2010, 2015, 2020, 2025].forEach(function (y) {
     var s = document.createElement('span');
-    s.textContent = y; s.style.left = ((y - START) / SPAN * 100) + '%';
+    s.textContent = y; s.style.left = ((t(y) - START) / SPAN * 100) + '%';
     ticks.appendChild(s);
   });
   var detail = document.getElementById('detail'), body = document.querySelector('.career-body');
