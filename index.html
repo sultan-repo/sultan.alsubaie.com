@@ -112,7 +112,12 @@ h2{margin:0 0 24px;font-size:34px;font-weight:700;letter-spacing:-.02em}
 .profile h2{margin:0;position:sticky;top:24px}
 .prose p{margin:0 0 18px;font-size:17px;line-height:1.7;color:#3D3530;max-width:68ch}
 .prose p:first-child{font-size:22px;line-height:1.5;color:var(--ink);font-weight:500;letter-spacing:-.01em}
-.prose p:last-child{margin-bottom:0}
+.prose p:last-of-type{margin-bottom:0}
+.prose.collapsed .more{display:none}
+.more-btn{margin-top:4px;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0;border:0;background:none;font:inherit;font-size:15px;font-weight:600;color:var(--accent);cursor:pointer}
+.more-btn:hover span{text-decoration:underline;text-underline-offset:3px}
+.more-btn svg{transition:transform .2s}
+.more-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
 .edu{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .edu li{border-top:2px solid var(--ink);padding-top:16px;display:flex;flex-direction:column;gap:4px}
 .edu b{font-size:17px;font-weight:600}.edu span{font-size:14px;color:var(--soft)}
@@ -209,12 +214,13 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
   <section id="profile" class="block" aria-labelledby="profile-h">
     <div class="profile">
       <h2 id="profile-h">Executive profile</h2>
-      <div class="prose">
+      <div class="prose" id="profile-text">
         <p>I am a technology executive with more than 20 years of experience spanning software engineering, enterprise architecture, digital platforms, technology strategy and organizational leadership.</p>
-        <p>I currently lead Entertainment Technology at stc, with responsibility across engineering, architecture, infrastructure, operations, platform reliability and technology delivery for stc tv and entertainment platforms.</p>
-        <p>My experience has given me a perspective from both sides of technology leadership. I started by building systems myself, then moved through business analysis, digital channels, technology demand management and enterprise applications before taking broader technology leadership responsibilities.</p>
-        <p>A recurring theme throughout my career has been building sustainable internal capability. I have established in-house engineering teams, transitioned strategic platforms away from vendor dependency, modernized technology estates and introduced AI and automation to improve efficiency and operational performance.</p>
+        <p class="more">I currently lead Entertainment Technology at stc, with responsibility across engineering, architecture, infrastructure, operations, platform reliability and technology delivery for stc tv and entertainment platforms.</p>
+        <p class="more">My experience has given me a perspective from both sides of technology leadership. I started by building systems myself, then moved through business analysis, digital channels, technology demand management and enterprise applications before taking broader technology leadership responsibilities.</p>
+        <p class="more">A recurring theme throughout my career has been building sustainable internal capability. I have established in-house engineering teams, transitioned strategic platforms away from vendor dependency, modernized technology estates and introduced AI and automation to improve efficiency and operational performance.</p>
         <p>I focus on the decisions that matter most at technology leadership level: where to build versus buy, how architecture supports business growth, how to develop strong engineering organizations, and how technology investment translates into customer and business value.</p>
+        <button class="more-btn" type="button" aria-expanded="true" aria-controls="profile-text" hidden><span>Show less</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
       </div>
     </div>
   </section>
@@ -387,6 +393,18 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
     ul.hidden = r.wins.length === 0;
   }
   select(0);
+})();
+
+(function(){
+  var box=document.getElementById('profile-text'); if(!box) return;
+  var btn=box.querySelector('.more-btn'), lbl=btn.querySelector('span');
+  function set(open){
+    box.classList.toggle('collapsed',!open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    lbl.textContent=open?'Show less':'Read full profile';
+  }
+  set(false); btn.hidden=false;
+  btn.addEventListener('click',function(){ set(btn.getAttribute('aria-expanded')!=='true'); });
 })();
 </script>
 </body>
