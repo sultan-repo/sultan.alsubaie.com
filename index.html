@@ -85,8 +85,6 @@ h2{margin:0 0 24px;font-size:34px;font-weight:700;letter-spacing:-.02em}
 .bar button{position:absolute;top:8px;bottom:8px;border:0;border-radius:6px;cursor:pointer;padding:0;opacity:.55;transition:opacity .15s,top .15s,bottom .15s}
 .bar button:hover{opacity:.8}
 .bar button[aria-pressed="true"]{top:0;bottom:0;opacity:1;box-shadow:0 0 0 2px var(--ink)}
-.study,.study-key{background:repeating-linear-gradient(135deg,#8F8476 0 2px,transparent 2px 5px);box-shadow:inset 0 0 0 1px #8F8476}
-.study{position:absolute;top:8px;bottom:8px;border-radius:6px;pointer-events:none}
 .ticks{position:relative;height:22px;margin-top:6px;font-size:12px;color:var(--soft)}
 .ticks span{position:absolute;transform:translateX(-50%)}
 .career-body{display:flex;flex-wrap:wrap;gap:28px;margin-top:28px}
@@ -248,7 +246,6 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
         <span><i style="background:#8C2F23"></i>stc</span>
         <span><i style="background:#D9A07A"></i>channels by stc</span>
         <span><i style="background:#3F4E5C"></i>Government</span>
-        <span><i class="study-key"></i>MSc, Manchester</span>
       </div>
     </div>
     <div class="bar" id="bar"></div>
@@ -364,12 +361,6 @@ footer a{color:var(--soft);min-height:44px;display:inline-flex;align-items:cente
     rb.addEventListener('click', function () { select(i, true); });
     li.appendChild(rb); list.appendChild(li); rowBtns.push(rb);
   });
-  var study = document.createElement('div');
-  study.className = 'study';
-  study.style.left = 'calc(' + ((2007.67 - START) / SPAN * 100) + '% + 1px)';
-  study.style.width = 'calc(' + ((2008.75 - 2007.67) / SPAN * 100) + '% - 2px)';
-  study.title = 'MSc, The University of Manchester, 2007 – 2008';
-  bar.appendChild(study);
   [2010, 2015, 2020, 2025].forEach(function (y) {
     var s = document.createElement('span');
     s.textContent = y; s.style.left = ((y - START) / SPAN * 100) + '%';
