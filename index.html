@@ -32,6 +32,19 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Sultan Alsubaie","jobTitle":"General Manager, Entertainment Technology","worksFor":{"@type":"Organization","name":"stc"},"address":{"@type":"PostalAddress","addressLocality":"Riyadh","addressCountry":"SA"},"email":"sultan@alsubaie.com","description":"Technology executive; General Manager, Entertainment Technology at stc. Technology strategy, enterprise architecture, digital platforms and AI adoption.","url":"https://sultan.alsubaie.com/","image":"https://sultan.alsubaie.com/og-v2.jpg","sameAs":["https://www.linkedin.com/in/alsubaie/"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"The University of Manchester"},{"@type":"CollegeOrUniversity","name":"Prince Sultan University"}]}
 </script>
+<script>
+(function () {
+  try {
+    var d = document.documentElement, k = 'swarm-build';
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (localStorage.getItem(k + '-off') === '1') return;
+    if (sessionStorage.getItem(k) === '1') return;
+    d.classList.add('swarm-js');
+    setTimeout(function () { if (!window.__swarmBuild) d.classList.remove('swarm-js'); }, 6000);
+  } catch (e) {}
+})();
+</script>
+<link rel="stylesheet" href="assets/swarm/swarm-build.css">
 <style>
 :root{--bg:#F7F3EC;--ink:#1E1A17;--muted:#5E554D;--soft:#6B6158;--line:#E2D9CC;--line2:#EFE7DB;--card:#FFFDF9;--accent:#8C2F23;--dark:#231C15;--dark2:#1F1B19;--cream:#F4ECE1}
 *{box-sizing:border-box}
@@ -187,6 +200,8 @@ h2{margin:0 0 24px;font-size:34px;font-weight:700;letter-spacing:-.02em}
   section.block{padding-top:24px;break-inside:avoid-page}
   .close{background:#fff;color:#1E1A17;margin-top:24px}.close-name{color:#1E1A17}.close-role,.close-meta,.close .eyebrow{color:#3D3530}
 }
+:root{--sb-select:#C4553A;--sb-ok:#9CC5A1;--sb-mono:'IBM Plex Mono',ui-monospace,monospace;--sb-glass:rgba(35,28,21,.86);--sb-glass-ink:#F4ECE1}
+.swarm-credit{margin:-4px 0 0;font-size:12px;color:#B9AC9E}
 </style>
 </head>
 <body>
@@ -205,9 +220,9 @@ h2{margin:0 0 24px;font-size:34px;font-weight:700;letter-spacing:-.02em}
     <div class="hero-edge" aria-hidden="true"></div>
   </div>
   <div class="hero-bottom" aria-hidden="true"></div>
-  <div class="wrap">
+  <div class="wrap" data-swarm>
     <header>
-      <a class="brand" href="#top"><b>Sultan Alsubaie</b><span class="mono">/ Profile</span></a>
+      <a class="brand" href="#top"><b>Sultan Alsubaie</b><span class="mono" data-swarm-origin>/ Profile</span></a>
       <nav aria-label="Sections">
         <a href="#career">Career</a>
         <a href="#scope">Scope</a>
@@ -217,10 +232,10 @@ h2{margin:0 0 24px;font-size:34px;font-weight:700;letter-spacing:-.02em}
     </header>
     <section class="hero-body" aria-labelledby="hero-h">
       <div class="hero-text">
-        <p class="eyebrow"><i aria-hidden="true"></i>General Manager, Entertainment Technology · stc</p>
-        <h1 id="hero-h">Sultan<br>Alsubaie</h1>
-        <p class="lead">Technology executive with twenty years from code to the leadership table. I set technology strategy, lead AI adoption, build the teams that own it, and run platforms for millions of customers at Saudi Arabia’s largest telecom group.</p>
-        <button class="read-more" id="xp-open" type="button" aria-expanded="true" aria-controls="xp" hidden><span>Read full profile</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+        <p class="eyebrow" data-swarm-step="fetch" data-swarm-label="title"><i aria-hidden="true"></i>General Manager, Entertainment Technology · stc</p>
+        <h1 id="hero-h" data-swarm-step="type" data-swarm-label="name">Sultan<br>Alsubaie</h1>
+        <p class="lead" data-swarm-step="stream" data-swarm-label="summary">Technology executive with twenty years from code to the leadership table. I set technology strategy, lead AI adoption, build the teams that own it, and run platforms for millions of customers at Saudi Arabia’s largest telecom group.</p>
+        <button class="read-more" id="xp-open" data-swarm-step="reveal" type="button" aria-expanded="true" aria-controls="xp" hidden><span>Read full profile</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="xp" id="xp">
           <div class="xp-in">
             <div class="xp-text" id="profile" role="region" aria-label="Executive profile">
@@ -231,14 +246,15 @@ h2{margin:0 0 24px;font-size:34px;font-weight:700;letter-spacing:-.02em}
             </div>
           </div>
         </div>
-        <div class="btns">
+        <div class="btns" data-swarm-step="frame" data-swarm-label="actions">
           <a class="btn primary" href="Sultan-Alsubaie-Profile.pdf" type="application/pdf" download>
             <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
             Download profile (PDF)</a>
           <a class="btn" href="https://www.linkedin.com/in/alsubaie/">LinkedIn</a>
           <a class="btn" href="mailto:sultan@alsubaie.com">Email</a>
         </div>
-        <p class="loc mono">Riyadh, Saudi Arabia</p>
+        <p class="loc mono" data-swarm-step="fetch" data-swarm-label="location">Riyadh, Saudi Arabia</p>
+        <p class="swarm-credit mono" data-swarm-credit hidden>Built by {agents} agents while you watched.</p>
       </div>
     </section>
   </div>
@@ -246,20 +262,20 @@ h2{margin:0 0 24px;font-size:34px;font-weight:700;letter-spacing:-.02em}
 
 <div class="wrap">
 <main>
-  <section id="career" class="block" aria-labelledby="career-h">
+  <section id="career" class="block" aria-labelledby="career-h" data-swarm>
     <div class="career-head">
-      <h2 id="career-h">Career</h2>
+      <h2 id="career-h" data-swarm-step="type">Career</h2>
       <div class="legend">
         <span><i style="background:#8C2F23"></i>stc</span>
         <span><i style="background:#D9A07A"></i>channels by stc</span>
         <span><i style="background:#3F4E5C"></i>Government</span>
       </div>
     </div>
-    <div class="bar" id="bar"></div>
+    <div class="bar" id="bar" data-swarm-step="frame" data-swarm-label="timeline"></div>
     <div class="ticks mono" id="ticks" aria-hidden="true"></div>
     <div class="career-body">
-      <ol class="roles" id="roles"></ol>
-      <article class="detail" id="detail" aria-live="polite">
+      <ol class="roles" id="roles" data-swarm-step="frame" data-swarm-label="roles"></ol>
+      <article class="detail" id="detail" aria-live="polite" data-swarm-step="frame" data-swarm-label="role detail">
         <div class="meta mono"><span class="y" id="d-years"></span><span class="o" id="d-org"></span></div>
         <h3 id="d-title"></h3>
         <p id="d-scope"></p>
@@ -446,6 +462,14 @@ h2{margin:0 0 24px;font-size:34px;font-weight:700;letter-spacing:-.02em}
   btn.addEventListener('click',function(){ set(btn.getAttribute('aria-expanded')!=='true'); });
   mobile.addEventListener && mobile.addEventListener('change',function(){ lock(btn.getAttribute('aria-expanded')==='true'); });
 })();
+</script>
+<script type="module">
+import { swarmBuild } from './assets/swarm/swarm-build.js';
+const swarm = swarmBuild({
+  crew: { planner: '#E8A58D', retriever: '#E9C46A', writer: '#7FC4CC', stylist: '#D9A7CF', eval: '#9CC5A1' },
+}).start();
+// a menu jump means the visitor wants content now: finish the build in progress
+document.querySelectorAll('nav a[href^="#"], .skip').forEach(function (a) { a.addEventListener('click', function () { swarm.skip(); }); });
 </script>
 </body>
 </html>
